@@ -26,9 +26,10 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(W, H);
+    createCanvas(W, H).parent("game_canvas");
     game=new Game();
     menu = new Menu();
+
 }
 
 function draw() {
