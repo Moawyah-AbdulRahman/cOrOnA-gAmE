@@ -46,7 +46,11 @@ class Game {
         this.highestScore=this.player.t;
     }
   
-    if(floor(sqrt(this.player.f/100+1))==sqrt(this.player.f/100+1)){
+    let enemies=function(second){
+      return floor(8.2-7.2 * Math.pow(2,-second/31));
+    }
+    
+    if( enemies(this.player.f/60) > this.enemies.length ){
       this.enemies[this.enemies.length] = new Enemy();
     }  
     
